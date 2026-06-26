@@ -408,6 +408,9 @@ function getEmbedUrl(raw) {
     if (u.hostname.includes('youtube.com')) {
       const v = u.searchParams.get('v');
       if (v) return 'https://www.youtube.com/embed/' + v;
+      // YouTube Shorts
+      const shortsMatch = u.pathname.match(/\/shorts\/([^/?&]+)/);
+      if (shortsMatch) return 'https://www.youtube.com/embed/' + shortsMatch[1];
     }
     if (u.hostname === 'youtu.be') {
       const v = u.pathname.slice(1).split('?')[0];
