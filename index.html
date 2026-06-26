@@ -297,6 +297,7 @@
       .photostrip{grid-template-columns:1fr 1fr}
       .action-img-tall{grid-row:unset}
       .action-text{padding:2.5rem}
+      #yt-grid{grid-template-columns:1fr 1fr !important}
     }
     @media(max-width:768px){
       .nlinks,.ncta{display:none}
@@ -307,6 +308,7 @@
       .ftg{grid-template-columns:1fr}
       .rwall{grid-template-columns:repeat(2,1fr)}
       .photostrip{grid-template-columns:1fr}
+      #yt-grid{grid-template-columns:1fr !important}
     }
     @media(prefers-reduced-motion:reduce){*{transition:none!important}}
   </style>
@@ -325,7 +327,7 @@
     <li><a href="#locations">Locations</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#articles">Articles</a></li>
-    <li><a href="videos.html">Videos</a></li>
+    <li><a href="videos.html">Coaching Library</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="https://wa.me/6596222845?text=Hi%20Coach%20Daren%2C%20I'd%20like%20to%20book%20a%20golf%20lesson" class="ncta" target="_blank" rel="noopener">Book a Lesson</a>
@@ -337,7 +339,7 @@
   <a href="#locations" onclick="cM()">Locations</a>
   <a href="#reviews" onclick="cM()">Reviews</a>
   <a href="#articles" onclick="cM()">Articles</a>
-  <a href="videos.html" onclick="cM()">Videos</a>
+  <a href="videos.html" onclick="cM()">Coaching Library</a>
   <a href="#faq" onclick="cM()">FAQ</a>
   <a href="#contact" onclick="cM()" style="color:var(--gold)">Book a Lesson</a>
 </div>
@@ -664,39 +666,193 @@
 
 
 
-<!-- VIDEOS PAGE TEASER -->
-<section id="videos" style="background:var(--ink);padding:5rem 8vw" aria-label="Videos">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+<!-- YOUTUBE VIDEOS SECTION -->
+<section id="videos" aria-label="YouTube videos from Daren Lim Golf" style="background:var(--ink);padding:5rem 8vw">
+
+  <!-- Section header -->
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:3rem">
     <div>
-      <p class="ey" style="color:var(--gold)">YouTube & Instagram</p>
-      <h2 class="st" style="color:#fff;margin-bottom:1.2rem">Watch the game.<br><em>Learn from it.</em></h2>
-      <p style="color:rgba(255,255,255,.58);line-height:1.85;font-size:.9rem;margin-bottom:1.5rem">Course vlogs from Sentosa Serapong, TMCC, NSRCC Changi, Horizon Hills and more — plus coaching tips, junior programme highlights, and overseas rounds. New videos every week.</p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap">
-        <a href="videos.html" class="btng">Watch All Videos →</a>
-        <a href="https://www.youtube.com/@DarenLimGolf?sub_confirmation=1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;background:#FF0000;color:#fff;padding:.85rem 1.5rem;font-family:var(--fb);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;text-decoration:none;transition:background .2s" onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FF0000'">▶ Subscribe on YouTube</a>
-      </div>
+      <p class="ey" style="color:var(--gold)">@DarenLimGolf on YouTube</p>
+      <h2 class="st" style="color:#fff">Watch. Learn.<br><em>Play better.</em></h2>
+      <p style="color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.8;max-width:48ch;margin-top:.8rem">Course vlogs, coaching tips, junior programme highlights and overseas rounds. New content every week from Coach Daren.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
-      <a href="videos.html" style="display:block;position:relative;overflow:hidden;aspect-ratio:16/9;grid-column:span 2">
-        <img src="https://img.youtube.com/vi/TnCuiiVolRE/maxresdefault.jpg" alt="Serapong Sentosa Golf Club - Daren Lim Golf" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.8);transition:transform .4s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" onerror="this.src='https://img.youtube.com/vi/TnCuiiVolRE/hqdefault.jpg'"/>
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,0,0,.9);display:flex;align-items:center;justify-content:center">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div style="position:absolute;bottom:.8rem;left:.8rem;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8);font-weight:600">Serapong · Sentosa Golf Club</div>
+    <div style="display:flex;gap:.8rem;flex-wrap:wrap;align-items:center">
+      <a href="https://www.youtube.com/@DarenLimGolf?sub_confirmation=1" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:.55rem;background:#FF0000;color:#fff;padding:.72rem 1.4rem;font-family:var(--fb);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;text-decoration:none;transition:background .2s"
+        onmouseover="this.style.background='#CC0000'" onmouseout="this.style.background='#FF0000'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>Subscribe
       </a>
-      <a href="videos.html" style="display:block;position:relative;overflow:hidden;aspect-ratio:16/9">
-        <img src="https://img.youtube.com/vi/II4U93xtbrY/maxresdefault.jpg" alt="Horizon Hills Golf CC - Daren Lim Golf" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.75)" onerror="this.src='https://img.youtube.com/vi/II4U93xtbrY/hqdefault.jpg'"/>
-        <div style="position:absolute;bottom:.6rem;left:.6rem;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:600">Horizon Hills · JB</div>
-      </a>
-      <a href="videos.html" style="display:block;position:relative;overflow:hidden;aspect-ratio:16/9">
-        <img src="https://img.youtube.com/vi/iETHCeJdgLk/maxresdefault.jpg" alt="NSRCC Changi - Daren Lim Golf" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.75)" onerror="this.src='https://img.youtube.com/vi/iETHCeJdgLk/hqdefault.jpg'"/>
-        <div style="position:absolute;bottom:.6rem;left:.6rem;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:600">NSRCC · Changi</div>
+      <a href="videos.html"
+        style="display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--gold);padding:.72rem 1.4rem;font-family:var(--fb);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-decoration:none;border:1px solid rgba(201,168,76,.3);transition:all .2s"
+        onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(201,168,76,.3)'">
+        Coaching Library →
       </a>
     </div>
   </div>
+
+  <!-- Filter tabs -->
+  <div style="display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:2rem" id="yt-filters">
+    <button onclick="filterYT('all',this)" style="font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;padding:.38rem 1rem;border:1px solid var(--gold);background:var(--gold);color:var(--gd);cursor:pointer;font-family:var(--fb);font-weight:600;transition:all .2s">All</button>
+    <button onclick="filterYT('vlog',this)" style="font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;padding:.38rem 1rem;border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.45);cursor:pointer;font-family:var(--fb);font-weight:500;transition:all .2s">Course Vlogs</button>
+    <button onclick="filterYT('tip',this)" style="font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;padding:.38rem 1rem;border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.45);cursor:pointer;font-family:var(--fb);font-weight:500;transition:all .2s">Tips & Coaching</button>
+    <button onclick="filterYT('junior',this)" style="font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;padding:.38rem 1rem;border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.45);cursor:pointer;font-family:var(--fb);font-weight:500;transition:all .2s">Junior</button>
+  </div>
+
+  <!-- Video grid -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(255,255,255,.05)" id="yt-grid">
+
+    <!-- Video 1 — Serapong 4K -->
+    <a href="https://www.youtube.com/watch?v=TnCuiiVolRE" target="_blank" rel="noopener" data-cat="vlog"
+      style="display:block;background:#0d1f0d;text-decoration:none;position:relative;overflow:hidden;transition:background .2s"
+      onmouseover="this.style.background='#142814'" onmouseout="this.style.background='#0d1f0d'">
+      <div style="position:relative;aspect-ratio:16/9;overflow:hidden">
+        <img src="https://img.youtube.com/vi/TnCuiiVolRE/mqdefault.jpg" alt="Serapong Sentosa - Daren Lim Golf" loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82);transition:transform .45s"
+          onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"
+          onerror="this.src='https://img.youtube.com/vi/TnCuiiVolRE/hqdefault.jpg'"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,168,76,.88);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#1A2F1A"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute;top:.6rem;left:.6rem;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(26,47,26,.88);color:var(--gold);padding:.22rem .65rem;font-weight:600;border:1px solid rgba(201,168,76,.25)">Course Vlog</span>
+      </div>
+      <div style="padding:1.1rem 1.2rem 1.4rem">
+        <div style="font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);font-weight:600;margin-bottom:.35rem">Sentosa Golf Club · Serapong</div>
+        <div style="font-family:var(--fd);font-size:1rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.45rem">[4K] What NOT TO DO at Singapore's Best</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.32)">Course management · Serapong Course</div>
+      </div>
+    </a>
+
+    <!-- Video 2 — Serapong mistakes -->
+    <a href="https://www.youtube.com/watch?v=_UqdK5t2KuY" target="_blank" rel="noopener" data-cat="tip"
+      style="display:block;background:#0d1f0d;text-decoration:none;position:relative;overflow:hidden;transition:background .2s"
+      onmouseover="this.style.background='#142814'" onmouseout="this.style.background='#0d1f0d'">
+      <div style="position:relative;aspect-ratio:16/9;overflow:hidden">
+        <img src="https://img.youtube.com/vi/_UqdK5t2KuY/mqdefault.jpg" alt="Serapong mistakes - Daren Lim Golf" loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82);transition:transform .45s"
+          onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"
+          onerror="this.src='https://img.youtube.com/vi/_UqdK5t2KuY/hqdefault.jpg'"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,168,76,.88);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#1A2F1A"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute;top:.6rem;left:.6rem;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(26,47,26,.88);color:#7ABFE8;padding:.22rem .65rem;font-weight:600;border:1px solid rgba(100,160,210,.25)">Tips & Coaching</span>
+      </div>
+      <div style="padding:1.1rem 1.2rem 1.4rem">
+        <div style="font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);font-weight:600;margin-bottom:.35rem">Sentosa Golf Club · Serapong</div>
+        <div style="font-family:var(--fd);font-size:1rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.45rem">How to Identify & Solve Mistakes on the Course</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.32)">Course mistakes · Problem-solving</div>
+      </div>
+    </a>
+
+    <!-- Video 3 — NSRCC Changi -->
+    <a href="https://www.youtube.com/watch?v=iETHCeJdgLk" target="_blank" rel="noopener" data-cat="vlog"
+      style="display:block;background:#0d1f0d;text-decoration:none;position:relative;overflow:hidden;transition:background .2s"
+      onmouseover="this.style.background='#142814'" onmouseout="this.style.background='#0d1f0d'">
+      <div style="position:relative;aspect-ratio:16/9;overflow:hidden">
+        <img src="https://img.youtube.com/vi/iETHCeJdgLk/mqdefault.jpg" alt="NSRCC Changi - Daren Lim Golf" loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82);transition:transform .45s"
+          onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"
+          onerror="this.src='https://img.youtube.com/vi/iETHCeJdgLk/hqdefault.jpg'"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,168,76,.88);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#1A2F1A"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute;top:.6rem;left:.6rem;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(26,47,26,.88);color:var(--gold);padding:.22rem .65rem;font-weight:600;border:1px solid rgba(201,168,76,.25)">Course Vlog</span>
+      </div>
+      <div style="padding:1.1rem 1.2rem 1.4rem">
+        <div style="font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);font-weight:600;margin-bottom:.35rem">NSRCC · Changi Course</div>
+        <div style="font-family:var(--fd);font-size:1rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.45rem">Shot by Shot at NSRCC Changi · Full 18</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.32)">Full round · Course vlog</div>
+      </div>
+    </a>
+
+    <!-- Video 4 — Horizon Hills -->
+    <a href="https://www.youtube.com/watch?v=II4U93xtbrY" target="_blank" rel="noopener" data-cat="vlog"
+      style="display:block;background:#0d1f0d;text-decoration:none;position:relative;overflow:hidden;transition:background .2s"
+      onmouseover="this.style.background='#142814'" onmouseout="this.style.background='#0d1f0d'">
+      <div style="position:relative;aspect-ratio:16/9;overflow:hidden">
+        <img src="https://img.youtube.com/vi/II4U93xtbrY/mqdefault.jpg" alt="Horizon Hills - Daren Lim Golf" loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82);transition:transform .45s"
+          onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"
+          onerror="this.src='https://img.youtube.com/vi/II4U93xtbrY/hqdefault.jpg'"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,168,76,.88);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#1A2F1A"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute;top:.6rem;left:.6rem;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(26,47,26,.88);color:var(--gold);padding:.22rem .65rem;font-weight:600;border:1px solid rgba(201,168,76,.25)">Course Vlog</span>
+      </div>
+      <div style="padding:1.1rem 1.2rem 1.4rem">
+        <div style="font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);font-weight:600;margin-bottom:.35rem">Horizon Hills · Johor Bahru</div>
+        <div style="font-family:var(--fd);font-size:1rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.45rem">Horizon Hills Golf & Country Club · Course Vlog</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.32)">JB · Overseas round</div>
+      </div>
+    </a>
+
+    <!-- Video 5 — TMCC Tampines course management -->
+    <a href="https://www.youtube.com/watch?v=wW8ZyJCu9oQ" target="_blank" rel="noopener" data-cat="tip"
+      style="display:block;background:#0d1f0d;text-decoration:none;position:relative;overflow:hidden;transition:background .2s"
+      onmouseover="this.style.background='#142814'" onmouseout="this.style.background='#0d1f0d'">
+      <div style="position:relative;aspect-ratio:16/9;overflow:hidden">
+        <img src="https://img.youtube.com/vi/wW8ZyJCu9oQ/mqdefault.jpg" alt="TMCC Tampines course management - Daren Lim Golf" loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82);transition:transform .45s"
+          onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"
+          onerror="this.src='https://img.youtube.com/vi/wW8ZyJCu9oQ/hqdefault.jpg'"/>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,168,76,.88);display:flex;align-items:center;justify-content:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#1A2F1A"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute;top:.6rem;left:.6rem;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(26,47,26,.88);color:#7ABFE8;padding:.22rem .65rem;font-weight:600;border:1px solid rgba(100,160,210,.25)">Tips & Coaching</span>
+      </div>
+      <div style="padding:1.1rem 1.2rem 1.4rem">
+        <div style="font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);font-weight:600;margin-bottom:.35rem">TMCC · Tampines Course</div>
+        <div style="font-family:var(--fd);font-size:1rem;font-weight:600;color:#fff;line-height:1.3;margin-bottom:.45rem">You Do Not Have to Attack Pins — Course Management</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.32)">Strategy · Playing smart · Part 2 of 6</div>
+      </div>
+    </a>
+
+    <!-- Video 6 — Subscribe CTA card -->
+    <a href="https://www.youtube.com/@DarenLimGolf?sub_confirmation=1" target="_blank" rel="noopener" data-cat="all"
+      style="display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0d1f0d;text-decoration:none;padding:2.5rem 1.5rem;text-align:center;border:1px solid rgba(201,168,76,.12);gap:1rem;transition:background .2s;min-height:200px"
+      onmouseover="this.style.background='#142814'" onmouseout="this.style.background='#0d1f0d'">
+      <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,0,0,.85);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <div style="font-family:var(--fd);font-size:1.1rem;font-weight:600;color:#fff;line-height:1.3">More videos on YouTube</div>
+      <div style="font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.6;max-width:22ch">Course vlogs, tips & junior programme highlights</div>
+      <div style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:.25rem">Subscribe @DarenLimGolf →</div>
+    </a>
+
+  </div><!-- end grid -->
+
 </section>
+
+<script>
+function filterYT(cat, btn) {
+  // update button styles
+  document.querySelectorAll('#yt-filters button').forEach(function(b) {
+    b.style.background = 'transparent';
+    b.style.color = 'rgba(255,255,255,.45)';
+    b.style.borderColor = 'rgba(255,255,255,.12)';
+    b.style.fontWeight = '500';
+  });
+  btn.style.background = 'var(--gold)';
+  btn.style.color = 'var(--gd)';
+  btn.style.borderColor = 'var(--gold)';
+  btn.style.fontWeight = '600';
+  // filter cards
+  document.querySelectorAll('#yt-grid > a').forEach(function(card) {
+    var cardCat = card.getAttribute('data-cat');
+    card.style.display = (cat === 'all' || cardCat === cat || cardCat === 'all') ? 'block' : 'none';
+  });
+  // last card (subscribe CTA) always visible
+}
+</script>
 
 <!-- ARTICLES -->
 <section id="articles" aria-label="Articles and coaching insights">
@@ -879,7 +1035,7 @@
       </div>
     </div>
     <div class="fc"><h4>Programmes</h4><ul><li><a href="#services">Private Lessons</a></li><li><a href="#services">Junior Programme</a></li><li><a href="#services">Competitive Development</a></li><li><a href="#services">Corporate Golf</a></li><li><a href="#services">Putting & Short Game</a></li><li><a href="#services">Online Coaching</a></li></ul></div>
-    <div class="fc"><h4>Quick Links</h4><ul><li><a href="#about">About Daren</a></li><li><a href="#locations">Locations</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Book a Lesson</a></li></ul></div>
+    <div class="fc"><h4>Quick Links</h4><ul><li><a href="#about">About Daren</a></li><li><a href="#locations">Locations</a></li><li><a href="#reviews">Reviews</a></li><li><a href="videos.html">Coaching Library</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Book a Lesson</a></li></ul></div>
     <div class="fc"><h4>Locations</h4><p>Tanah Merah Country Club<br>151 Xilin Ave<br>Singapore 486798</p><p style="margin-top:1rem">Friends Golf Clarke Quay Central<br>6 Eu Tong Sen St #04-57<br>Singapore 059817</p></div>
   </div>
   <div class="fbot">© 2026 Daren Lim Golf · Certified PGA Golf Professional · Singapore · <a href="https://www.instagram.com/darenlimgolf/" target="_blank" rel="noopener">@darenlimgolf</a> · Titleist & FootJoy Ambassador</div>
