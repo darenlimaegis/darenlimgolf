@@ -398,8 +398,14 @@ const SEED_VIDEOS = [
 ];
 
 // ── STORAGE ───────────────────────────────────────────────────
+const CACHE_VERSION = 'v2';
 function loadVideos() {
   try {
+    // Clear old localStorage if cache version has changed
+    if (localStorage.getItem('dlg_cache_version') !== CACHE_VERSION) {
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.setItem('dlg_cache_version', CACHE_VERSION);
+    }
     const raw = localStorage.getItem(STORAGE_KEY);
     const saved = raw ? JSON.parse(raw) : [];
     // Merge: saved (admin-added) on top, seed videos appended if not already present
