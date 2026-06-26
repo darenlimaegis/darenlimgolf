@@ -382,12 +382,24 @@ let activeTab   = 'yt';
 // objectURLs for file-based videos (not persisted, only for current session)
 let blobURLs    = {}; // id -> objectURL
 
+// ── SEED VIDEOS (hardcoded, always visible on every device) ──
+const SEED_VIDEOS = [
+  { id:'seed_4', type:'yt', title:'How to Control Club Face?', cat:'Short', duration:'', embedUrl:'https://www.youtube.com/embed/XLbzFiCtKqQ', thumb:'https://img.youtube.com/vi/XLbzFiCtKqQ/hqdefault.jpg' },
+  { id:'seed_3', type:'yt', title:'What is a Lob Shot?',       cat:'Short', duration:'', embedUrl:'https://www.youtube.com/embed/WGjBV1u6z-0', thumb:'https://img.youtube.com/vi/WGjBV1u6z-0/hqdefault.jpg' },
+  { id:'seed_2', type:'yt', title:'What is a Pitch Shot?',     cat:'Short', duration:'', embedUrl:'https://www.youtube.com/embed/BMA96CdjB7U', thumb:'https://img.youtube.com/vi/BMA96CdjB7U/hqdefault.jpg' },
+  { id:'seed_1', type:'yt', title:'What is a Chip Shot?',      cat:'Short', duration:'', embedUrl:'https://www.youtube.com/embed/GCAU13eGTiY', thumb:'https://img.youtube.com/vi/GCAU13eGTiY/hqdefault.jpg' },
+];
+
 // ── STORAGE ───────────────────────────────────────────────────
 function loadVideos() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    videos = raw ? JSON.parse(raw) : [];
-  } catch(e) { videos = []; }
+    const saved = raw ? JSON.parse(raw) : [];
+    // Merge: saved (admin-added) on top, seed videos appended if not already present
+    const savedIds = new Set(saved.map(v => v.id));
+    const unseenSeeds = SEED_VIDEOS.filter(v => !savedIds.has(v.id));
+    videos = [...saved, ...unseenSeeds];
+  } catch(e) { videos = [...SEED_VIDEOS]; }
 }
 function saveVideos() {
   // strip blobUrl before persisting (can't serialise File objects)
